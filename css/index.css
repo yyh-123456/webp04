@@ -1,0 +1,21 @@
+div p {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+}
+.banner {
+  width: 300px;
+  color: black;
+}
+#banner {
+  background-color: blue;
+}
+div.bg {
+  background-color: url("img/product/bg.jpg");
+}
+div.bgs {
+  color: red;
+  background-color: green;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

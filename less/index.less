@@ -1,0 +1,30 @@
+@width:200px;
+div{
+    p{
+        width: @width;
+        height: 200px;
+        background-color: aqua;
+    }
+}
+
+@divname:banner;
+.@{divname}{
+    width: 300px;
+    color:black;
+}
+#@{divname}{
+    background-color: blue;
+}
+@image:"img/product/";
+div.bg{
+    background-color: url("@{image}bg.jpg");
+}
+@colorstr:color;
+@topbottom:bottom;
+div.bgs{
+    @{colorstr}:red;
+    background-@{colorstr}: green;
+    border-@{topbottom}-left-radius:10px;
+    border-@{topbottom}-right-radius:10px;
+}
+

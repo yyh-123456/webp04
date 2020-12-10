@@ -1,0 +1,86 @@
+// .comm(@index) when(@index<9){
+//     div:nth-child(@{index}){
+//         width: 0;
+//         height: 0;
+//         border-top: 50px solid transparent;
+//         border-right: 100px solid ;
+//         border-bottom: 50px solid transparent;
+//     }
+//     .comm(@index+2);
+// }
+// .comm(2);
+// .comm(1);
+// @size:50px;
+// .mixin{width: 0;height: 0;float: left; margin-left: 20px};
+// .left{
+//     border-top: @size solid transparent;
+//     border-bottom: @size solid transparent;};
+
+// .bottom{
+//         border-left: @size solid transparent;
+//         border-right: @size solid transparent ;
+//     };
+// .right{
+//        border-top: @size solid transparent;
+//        border-bottom: @size solid transparent;
+//     };
+// .top{
+//         border-left: @size solid transparent;
+//         border-right: @size solid transparent ;
+//     };
+div:nth-child(1){
+    // .mixin;
+    // .left;
+    // border-right: 2*@size solid red;
+    .main(right, red, 100px);
+}
+div:nth-child(2){
+    // .mixin;
+    // .left;
+    // border-right: @size solid blue ;
+    .main(right, green, 50px);
+}
+div:nth-child(3){
+    // .mixin;
+    // .bottom;
+    // border-top: 2*@size solid green;
+    .main(bottom, blue, 100px);
+}
+div:nth-child(4){
+    // .mixin;
+    // .bottom;
+    // border-top: @size solid gold;
+    .main(bottom, pink, 50px);
+}
+div:nth-child(5){
+    // .mixin;
+    // .right;
+    // border-left: 2*@size solid red;
+    .main(left, skyblue, 100px);
+}
+div:nth-child(6){
+    // .mixin;
+    // .right;
+    // border-left: @size solid blue ;
+    .main(left, gold, 50px);
+}
+div:nth-child(7){
+    // .mixin;
+    // .top;
+    // border-bottom: 2*@size solid green;
+    .main(top, yellow, 100px);
+}
+div:nth-child(8){
+//     .mixin;
+//     .top;
+//     border-bottom: @size solid gold;
+.main(top, rgb(225, 0, 255), 50px);
+}
+
+.main(@direction,@color,@size){
+    border: @size solid transparent;
+    border-@{direction}:@size solid @color;
+    width: 0;
+    height: 0;
+    float: left;
+}

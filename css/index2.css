@@ -1,0 +1,13 @@
+ul {
+  list-style: none;
+  padding: 20px 10px;
+  background-color: blue;
+}
+ul li {
+  width: 500px;
+  background-color: chartreuse;
+}
+ul li:hover {
+  font-size: 30px;
+  background-color: red;
+}
